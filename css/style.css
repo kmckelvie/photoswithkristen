@@ -1,0 +1,664 @@
+/* ============================================
+   Kristen McKelvie Photography
+   Shared stylesheet
+   ============================================ */
+
+/* ---- Fonts ---- */
+@font-face {
+  font-family: "Roselyn";
+  src: url("../fonts/Roselyn-Regular.woff2") format("woff2"),
+       url("../fonts/Roselyn-Regular.woff") format("woff"),
+       url("../fonts/Roselyn-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Quicksand + Libre Baskerville load from Google Fonts via <link> in each page head */
+
+/* ---- Design tokens ---- */
+:root {
+  --slate:        #666c75;
+  --cream:        #f6f4ef;
+  --offwhite:     #f7f7f7;
+  --rose:         #ebcdd3;
+  --blush:        #f5e0e4;
+  --blush-pale:   #f6eaec;
+  --taupe:        #ddd8d4;
+  --white:        #ffffff;
+
+  --font-script:  "Roselyn", "Pinyon Script", cursive;
+  --font-serif:   "Libre Baskerville", Georgia, serif;
+  --font-sans:    "Quicksand", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --maxw:         1180px;
+}
+
+/* ---- Reset ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--slate);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ---- Typography helpers ---- */
+.script {
+  font-family: var(--font-script);
+  font-weight: normal;
+  line-height: 1.1;
+  color: var(--slate);
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.section-pad { padding: 5rem 1.5rem; }
+.wrap { max-width: var(--maxw); margin: 0 auto; }
+.center { text-align: center; }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.95rem 2.4rem;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-light { background: var(--white); color: var(--slate); }
+.btn-light:hover { background: var(--slate); color: var(--cream); }
+.btn-slate { background: var(--slate); color: var(--cream); }
+.btn-slate:hover { background: transparent; color: var(--slate); border-color: var(--slate); }
+.btn-outline { background: transparent; color: var(--slate); border-color: var(--slate); }
+.btn-outline:hover { background: var(--slate); color: var(--cream); }
+
+.text-link {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--slate);
+  border-bottom: 1px solid var(--rose);
+  padding-bottom: 4px;
+  transition: border-color 0.25s ease;
+}
+.text-link:hover { border-color: var(--slate); }
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.site-header {
+  background: var(--cream);
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+.nav-bar {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--slate);
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.nav-links a:hover,
+.nav-links a.active { border-bottom-color: var(--rose); }
+
+.nav-social {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--slate);
+}
+
+/* Logo lockup */
+.logo-lockup {
+  text-align: center;
+  padding: 1.5rem 0 1.75rem;
+}
+.logo-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; height: 78px;
+  border: 1px solid var(--slate);
+  border-radius: 50%;
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  color: var(--slate);
+  margin-bottom: 0.75rem;
+}
+.logo-name {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.logo-sub {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 0.4rem;
+}
+
+/* Mobile nav toggle */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+.nav-toggle span {
+  display: block; width: 24px; height: 1.5px;
+  background: var(--slate); margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--taupe);
+}
+.hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.22));
+}
+.hero-inner { position: relative; z-index: 2; padding: 2rem 1.5rem; color: var(--white); }
+.hero-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1.75rem;
+}
+
+/* page banner (smaller hero for inner pages) */
+.page-banner {
+  position: relative;
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--taupe);
+}
+.page-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.18);
+}
+.page-banner .script {
+  position: relative; z-index: 2;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  color: var(--white);
+}
+
+/* ============================================
+   GENERIC SECTION PIECES
+   ============================================ */
+.section-script {
+  font-family: var(--font-script);
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  color: var(--slate);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.section-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 2.25rem;
+}
+.lead {
+  font-size: 0.92rem;
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--rose);
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+}
+
+/* ============================================
+   PRICING CARDS
+   ============================================ */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.price-card {
+  background: var(--white);
+  padding: 2.5rem 1.4rem;
+  text-align: center;
+  position: relative;
+}
+.price-card.featured { background: var(--blush-pale); }
+.price-card .badge {
+  position: absolute; top: 1rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.price-card .tier-name {
+  font-family: var(--font-script);
+  font-size: 2.6rem;
+  color: var(--slate);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.price-card.featured .tier-name { margin-top: 1rem; }
+.price-card .tier-kicker {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.price-card .tier-price {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+.price-card .tier-price .from {
+  font-size: 0.95rem;
+  display: block;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.2rem;
+}
+.price-card ul { list-style: none; }
+.price-card li {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0;
+}
+
+/* ============================================
+   ABOUT SPLIT
+   ============================================ */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.75rem;
+  align-items: center;
+}
+.split-img {
+  background: var(--taupe);
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+}
+.split h2 { font-weight: normal; }
+.split p {
+  font-size: 0.85rem;
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.9rem;
+}
+
+/* ============================================
+   GALLERY GRID
+   ============================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.gallery-grid .tile {
+  aspect-ratio: 3 / 4;
+  background: var(--taupe);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.gallery-grid .tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-grid .tile:hover img { transform: scale(1.05); }
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.testimonial {
+  background: var(--blush-pale);
+  padding: 2.5rem 2rem;
+}
+.testimonial p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+}
+.testimonial .attr {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   CTA BANNER
+   ============================================ */
+.cta-banner {
+  background: var(--rose);
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+.cta-banner .script {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.cta-banner .eyebrow { margin-bottom: 2rem; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--slate);
+  color: var(--cream);
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+.site-footer .f-name {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.site-footer .f-sub {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.62rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(246,244,239,0.7);
+  margin-bottom: 1.5rem;
+}
+.site-footer .f-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.site-footer .f-links a {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(246,244,239,0.85);
+  transition: color 0.2s ease;
+}
+.site-footer .f-links a:hover { color: var(--white); }
+.site-footer .f-fine {
+  margin-top: 1.75rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(246,244,239,0.45);
+}
+
+/* ============================================
+   FORMS  (contact / inquiry)
+   ============================================ */
+.form-grid {
+  max-width: 620px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.2rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.field label {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--slate);
+  background: var(--white);
+  border: 1px solid var(--taupe);
+  padding: 0.8rem 0.9rem;
+}
+.field textarea { resize: vertical; min-height: 130px; }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+}
+
+/* ============================================
+   BOOKING / EMBED
+   ============================================ */
+.embed-frame {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  background: var(--white);
+  min-height: 820px;
+  border: 1px solid var(--taupe);
+}
+.embed-frame iframe { width: 100%; min-height: 820px; border: 0; display: block; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.step { text-align: center; padding: 0 0.5rem; }
+.step .num {
+  font-family: var(--font-script);
+  font-size: 3rem;
+  color: var(--rose);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.step h3 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.step p { font-size: 0.8rem; line-height: 1.8; }
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--taupe);
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 1.3rem 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-q .icon { font-family: var(--font-serif); font-size: 1.2rem; transition: transform 0.3s ease; }
+.faq-q[aria-expanded="true"] .icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-a p {
+  font-size: 0.82rem;
+  line-height: 1.85;
+  padding: 0 0 1.3rem;
+}
+
+/* ============================================
+   UTILITY SECTIONS
+   ============================================ */
+.bg-cream    { background: var(--cream); }
+.bg-offwhite { background: var(--offwhite); }
+.bg-white    { background: var(--white); }
+.bg-blush    { background: var(--blush-pale); }
+
+/* ============================================
+   PAGE-LOAD ANIMATION
+   Content is visible by default. Only when JS adds
+   .js-anim to <html> do we hide-then-reveal, so the
+   site degrades gracefully without JavaScript.
+   ============================================ */
+.js-anim .fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js-anim .fade-up.in { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .fade-up { opacity: 1; transform: none; transition: none; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 860px) {
+  .pricing-grid,
+  .testimonial-grid,
+  .split,
+  .steps { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .split-img { min-height: 280px; order: -1; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 1.5rem;
+    z-index: 50;
+    border-top: 1px solid var(--taupe);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0.6rem 0; }
+  .nav-toggle { display: block; }
+  .nav-bar { position: relative; }
+  .nav-social { display: none; }
+  .section-pad { padding: 3.5rem 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
