@@ -1,6 +1,6 @@
 # Kristen McKelvie Photography
 
-Static website for Kristen McKelvie Photography — documentary family photography in Leander, TX.
+Static website for Kristen McKelvie Photography — documentary family photography in Georgetown, TX.
 Built to be hosted on GitHub Pages.
 
 ## Structure
