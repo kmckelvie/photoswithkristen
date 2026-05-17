@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kristen McKelvie Photography</title>
+  <meta name="description" content="Get in touch with Kristen McKelvie Photography — documentary family photography in Leander, Texas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="https://www.instagram.com/kristenmckelvie/" target="_blank" rel="noopener" class="nav-social">@kristenmckelvie</a>
+    </div>
+    <div class="logo-lockup">
+      <div class="logo-monogram">KM</div>
+      <div class="logo-name">Kristen McKelvie</div>
+      <div class="logo-sub">Photography</div>
+    </div>
+  </header>
+
+  <section class="page-banner" style="background-image:url('images/contact-banner.jpg')">
+    <p class="script">say hello</p>
+  </section>
+
+  <!-- Intro + form -->
+  <section class="section-pad bg-cream center">
+    <div class="wrap fade-up">
+      <p class="section-script">get in touch</p>
+      <p class="section-eyebrow">I'd love to hear from you</p>
+      <p class="lead" style="margin-bottom:2.5rem;">
+        Have a question, a custom request, or just want to say hi? Fill out the
+        form below and I'll get back to you within two business days. Ready to
+        lock in a date? The booking page is the fastest way.
+      </p>
+
+      <!-- ====================================================
+           CONTACT FORM
+           This form is set up for Formspree (free tier).
+           1. Create a form at https://formspree.io
+           2. Replace YOUR_FORM_ID below with your form ID.
+           Until then the form will not send.
+           ==================================================== -->
+      <form class="form-grid" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="field">
+            <label for="session">Session of Interest</label>
+            <select id="session" name="session">
+              <option value="">Choose one&hellip;</option>
+              <option value="Mini Session">Mini Session</option>
+              <option value="Family Session">Family Session</option>
+              <option value="Day In The Life">Day In The Life</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Tell me about your family</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-slate">Send Message</button>
+        </div>
+      </form>
+
+      <p class="tagline" style="color:var(--slate);margin-top:2.5rem;">
+        Prefer email? Reach me directly at
+        <a href="mailto:mrs@kristenmckelvie.com" class="text-link"
+           style="border-bottom:none;">mrs@kristenmckelvie.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner fade-up">
+    <p class="script">or skip ahead<br />&amp; book now</p>
+    <p class="eyebrow">Check live availability</p>
+    <a href="booking.html" class="btn btn-light">Go to Booking</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="f-name">Kristen McKelvie</div>
+    <div class="f-sub">Photography &middot; Leander, Texas</div>
+    <ul class="f-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Book</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.instagram.com/kristenmckelvie/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/KristenLeePhotog/" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+    <p class="f-fine">&copy; 2026 Kristen McKelvie Photography. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

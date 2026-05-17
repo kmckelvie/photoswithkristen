@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Session | Kristen McKelvie Photography</title>
+  <meta name="description" content="Book your family photography session in Leander, TX. Choose your session, pick a date, and reserve your spot." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html" class="active">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://www.instagram.com/kristenmckelvie/" target="_blank" rel="noopener" class="nav-social">@kristenmckelvie</a>
+    </div>
+    <div class="logo-lockup">
+      <div class="logo-monogram">KM</div>
+      <div class="logo-name">Kristen McKelvie</div>
+      <div class="logo-sub">Photography</div>
+    </div>
+  </header>
+
+  <section class="page-banner" style="background-image:url('images/booking-banner.jpg')">
+    <p class="script">let's pick a date</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-pad bg-cream center">
+    <div class="wrap fade-up">
+      <p class="section-script">how booking works</p>
+      <p class="section-eyebrow">Three simple steps</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Choose your session</h3>
+          <p>Pick the session that fits your family — Mini, Family, or Day In The Life.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Pick your date</h3>
+          <p>Open the scheduler to see available times. You'll fill out a short form so I can prepare.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Reserve your spot</h3>
+          <p>A retainer locks in your date. Then we plan the details together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking embed -->
+  <section class="section-pad bg-offwhite center">
+    <div class="wrap fade-up">
+      <p class="section-script">check availability</p>
+      <p class="section-eyebrow">Choose a time that works for you</p>
+      <p class="lead" style="margin-bottom:2.25rem;">
+        Pick your session and a date below. If the scheduler doesn't load,
+        the button will take you straight to my booking page.
+      </p>
+
+      <!-- ====================================================
+           CLOUDSPOT SCHEDULER — EMBED WITH FALLBACK
+           The iframe tries to load the CloudSpot scheduler in
+           the page. main.js checks whether it loaded; if
+           CloudSpot blocks embedding (X-Frame-Options / CSP),
+           the iframe is hidden and the fallback button shows
+           instead. To update the URL, change BOTH the iframe
+           src and the fallback link href below.
+           ==================================================== -->
+      <div id="booking-embed"
+           data-booking-url="https://kristenmckelvie.studio.cloudspot.io/scheduling/services">
+
+        <div class="embed-frame">
+          <iframe
+            id="booking-iframe"
+            src="https://kristenmckelvie.studio.cloudspot.io/scheduling/services"
+            title="Book a session with Kristen McKelvie Photography"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Fallback — hidden unless the embed fails to load -->
+        <div id="booking-fallback" style="display:none;">
+          <p class="lead" style="margin-bottom:1.75rem;">
+            The scheduler opens best in its own tab — click below to see live
+            availability and reserve your date.
+          </p>
+          <a href="https://kristenmckelvie.studio.cloudspot.io/scheduling/services"
+             class="btn btn-slate"
+             target="_blank" rel="noopener"
+             style="font-size:0.78rem;padding:1.15rem 3rem;">
+            Book Your Session &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <p class="tagline" style="color:var(--slate);">
+        Trouble with the scheduler? Email
+        <a href="mailto:mrs@kristenmckelvie.com" class="text-link"
+           style="border-bottom:none;">mrs@kristenmckelvie.com</a>
+        and we'll find a time together.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reassurance -->
+  <section class="section-pad bg-cream center">
+    <div class="wrap fade-up">
+      <p class="section-script">before you book</p>
+      <p class="section-eyebrow">A couple of things to know</p>
+      <p class="lead">
+        A retainer reserves your date, with the remaining balance due before
+        your session. Need to move things around for weather or a sick little
+        one? No problem &mdash; we can reschedule with plenty of notice and no
+        penalty.
+      </p>
+      <div style="margin-top:1.5rem;">
+        <a href="services.html" class="text-link">See full pricing &amp; details</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="f-name">Kristen McKelvie</div>
+    <div class="f-sub">Photography &middot; Leander, Texas</div>
+    <ul class="f-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Book</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.instagram.com/kristenmckelvie/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/KristenLeePhotog/" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+    <p class="f-fine">&copy; 2026 Kristen McKelvie Photography. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
