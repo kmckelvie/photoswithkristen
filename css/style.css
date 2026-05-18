@@ -200,10 +200,6 @@ a { color: inherit; }
 .hero {
   position: relative;
   min-height: 78vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
   background-size: cover;
   background-position: center;
   background-color: var(--taupe);
@@ -213,7 +209,18 @@ a { color: inherit; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.42));
 }
-.hero-inner { position: relative; z-index: 2; padding: 14vh 1.5rem 2rem; color: var(--white); }
+.hero-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 90px 1.5rem 48px;
+  color: var(--white);
+}
+.hero-inner .btn { margin-top: auto; }
 .hero-script {
   font-family: var(--font-script);
   font-size: clamp(3.5rem, 9vw, 7rem);
