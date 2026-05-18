@@ -210,7 +210,7 @@ a { color: inherit; }
 .hero::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.22));
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.42));
 }
 .hero-inner { position: relative; z-index: 2; padding: 2rem 1.5rem; color: var(--white); }
 .hero-script {
@@ -219,6 +219,7 @@ a { color: inherit; }
   line-height: 1.05;
   color: var(--white);
   margin-bottom: 1rem;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35), 0 1px 6px rgba(0,0,0,0.25);
 }
 .hero-eyebrow {
   font-family: var(--font-sans);
@@ -228,6 +229,7 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 1.75rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 /* page banner (smaller hero for inner pages) */
