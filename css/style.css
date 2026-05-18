@@ -40,9 +40,10 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-sans);
   font-weight: 400;
+  font-size: 16px;
   color: var(--slate);
   background: var(--cream);
-  line-height: 1.6;
+  line-height: 1.9;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -58,9 +59,9 @@ a { color: inherit; }
 }
 .eyebrow {
   font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--slate);
 }
@@ -68,7 +69,7 @@ a { color: inherit; }
   font-family: var(--font-serif);
   font-style: italic;
 }
-.section-pad { padding: 5rem 1.5rem; }
+.section-pad { padding: 6rem 1.5rem; }
 .wrap { max-width: var(--maxw); margin: 0 auto; }
 .center { text-align: center; }
 
@@ -133,18 +134,20 @@ a { color: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--taupe);
+  border-bottom: 1px solid var(--taupe);
 }
 .nav-links {
   display: flex;
-  gap: 1.8rem;
+  gap: 2.8rem;
   list-style: none;
 }
 .nav-links a {
   font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--slate);
@@ -254,10 +257,10 @@ a { color: inherit; }
   margin-bottom: 2.25rem;
 }
 .lead {
-  font-size: 1rem;
-  line-height: 1.95;
+  font-size: 1.05rem;
+  line-height: 2.05;
   letter-spacing: 0.01em;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
 }
 .tagline {
@@ -333,9 +336,9 @@ a { color: inherit; }
 }
 .price-card ul { list-style: none; }
 .price-card li {
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  padding: 0.4rem 0;
 }
 
 /* ============================================
@@ -355,10 +358,10 @@ a { color: inherit; }
 }
 .split h2 { font-weight: normal; }
 .split p {
-  font-size: 0.85rem;
-  line-height: 1.95;
-  letter-spacing: 0.03em;
-  margin-bottom: 0.9rem;
+  font-size: 1rem;
+  line-height: 2.0;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
 }
 
 /* ============================================
