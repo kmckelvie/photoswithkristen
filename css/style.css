@@ -201,7 +201,7 @@ a { color: inherit; }
   position: relative;
   min-height: 78vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   background-size: cover;
@@ -213,7 +213,7 @@ a { color: inherit; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.42));
 }
-.hero-inner { position: relative; z-index: 2; padding: 2rem 1.5rem; color: var(--white); }
+.hero-inner { position: relative; z-index: 2; padding: 14vh 1.5rem 2rem; color: var(--white); }
 .hero-script {
   font-family: var(--font-script);
   font-size: clamp(3.5rem, 9vw, 7rem);
