@@ -127,11 +127,11 @@ a { color: inherit; }
   margin: 0 auto;
 }
 
-/* Nav bar — slate strip between logo and hero */
+/* Nav bar — blush strip between logo and hero */
 .nav-bar {
-  background: var(--slate);
+  background: var(--rose);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0.8rem 2rem;
 }
@@ -147,23 +147,13 @@ a { color: inherit; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(255,255,255,0.82);
+  color: var(--slate);
   padding-bottom: 3px;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 .nav-links a:hover,
-.nav-links a.active { border-bottom-color: var(--rose); color: var(--white); }
-
-.nav-social {
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgba(255,255,255,0.65);
-}
+.nav-links a.active { border-bottom-color: var(--slate); color: var(--slate); }
 
 /* Mobile nav toggle */
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
