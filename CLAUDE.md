@@ -3,3 +3,7 @@
 ## Branching
 
 For simple, low-risk changes (copy edits, style tweaks, minor content updates), commit directly to `main` — no worktree or feature branch needed.
+
+## Pushing
+
+Never push to origin. Kristen pushes via GitHub Desktop. Only commit.
