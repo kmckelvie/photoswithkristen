@@ -127,9 +127,9 @@ a { color: inherit; }
   margin: 0 auto;
 }
 
-/* Nav bar — blush strip between logo and hero */
+/* Nav bar — cream strip between logo and hero */
 .nav-bar {
-  background: var(--rose);
+  background: var(--cream);
   display: flex;
   justify-content: center;
   align-items: center;
