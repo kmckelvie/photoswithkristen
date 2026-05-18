@@ -112,14 +112,27 @@ a { color: inherit; }
    ============================================ */
 .site-header {
   background: var(--cream);
-  padding: 1.5rem 1.5rem 0.5rem;
 }
-.nav-bar {
-  max-width: var(--maxw);
+
+/* Logo lockup — cream area at top */
+.logo-lockup {
+  text-align: center;
+  padding: 1.75rem 1.5rem 1.5rem;
+}
+.site-logo {
+  height: 120px;
+  width: auto;
+  display: block;
   margin: 0 auto;
+}
+
+/* Nav bar — slate strip between logo and hero */
+.nav-bar {
+  background: var(--slate);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.8rem 2rem;
 }
 .nav-links {
   display: flex;
@@ -133,13 +146,13 @@ a { color: inherit; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--slate);
+  color: rgba(255,255,255,0.82);
   padding-bottom: 3px;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 .nav-links a:hover,
-.nav-links a.active { border-bottom-color: var(--rose); }
+.nav-links a.active { border-bottom-color: var(--rose); color: var(--white); }
 
 .nav-social {
   font-family: var(--font-sans);
@@ -148,49 +161,14 @@ a { color: inherit; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--slate);
-}
-
-/* Logo lockup */
-.logo-lockup {
-  text-align: center;
-  padding: 1.5rem 0 1.75rem;
-}
-.logo-monogram {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px; height: 78px;
-  border: 1px solid var(--slate);
-  border-radius: 50%;
-  font-family: var(--font-script);
-  font-size: 2.1rem;
-  color: var(--slate);
-  margin-bottom: 0.75rem;
-}
-.logo-name {
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 1.55rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--slate);
-}
-.logo-sub {
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 0.68rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--slate);
-  margin-top: 0.4rem;
+  color: rgba(255,255,255,0.65);
 }
 
 /* Mobile nav toggle */
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
 .nav-toggle span {
   display: block; width: 24px; height: 1.5px;
-  background: var(--slate); margin: 5px 0;
+  background: var(--white); margin: 5px 0;
   transition: all 0.3s ease;
 }
 
@@ -329,10 +307,11 @@ a { color: inherit; }
 }
 .price-card .tier-name {
   font-family: var(--font-script);
-  font-size: 2.6rem;
+  font-size: 3.6rem;
   color: var(--slate);
   line-height: 1;
   margin-bottom: 0.3rem;
+  -webkit-text-stroke: 0.3px currentColor;
 }
 .price-card.featured .tier-name { margin-top: 1rem; }
 .price-card .tier-kicker {
