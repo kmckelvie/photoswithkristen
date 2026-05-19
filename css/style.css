@@ -316,7 +316,7 @@ a { color: inherit; }
 .price-card .tier-kicker {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
