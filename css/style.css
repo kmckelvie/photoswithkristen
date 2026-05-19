@@ -351,10 +351,11 @@ a { color: inherit; }
   align-items: center;
 }
 .split-img {
-  background: var(--taupe);
-  background-size: cover;
-  background-position: top center;
-  min-height: 360px;
+  background: var(--cream);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 420px;
 }
 .split h2 { font-weight: normal; }
 .split p {
@@ -554,12 +555,12 @@ a { color: inherit; }
 .step h3 {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
-.step p { font-size: 0.8rem; line-height: 1.8; }
+.step p { font-size: 0.95rem; line-height: 1.9; }
 
 /* ============================================
    FAQ
